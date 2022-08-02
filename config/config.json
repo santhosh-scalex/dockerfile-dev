@@ -1,0 +1,72 @@
+{
+  "local": {
+    "username": "root",
+    "password": "root",
+    "database": "collection",
+    "host": "localhost",
+    "dialect": "postgresql"
+  },
+  "development": {
+    "username": "postgres",
+    "password": "Solesafe123",
+    "database": "solesafe_dev",
+    "host": "solesafe-dev.caod2rgttsw8.us-east-1.rds.amazonaws.com",
+    "dialect": "postgresql",
+    "pool": {
+      "max": 10,
+      "min": 0,
+      "idle": 1000,
+      "acquire": 10000,
+      "evict": 1000,
+      "handleDisconnects": true
+    },
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
+  },
+  "qa": {
+    "username": "postgres",
+    "password": "Solesafe2.0",
+    "database": "solesafe",
+    "host": "solesafe-usermgnt-qa.ccf6qc40pkid.us-west-2.rds.amazonaws.com",
+    "dialect": "postgresql",
+    "pool": {
+      "max": 10,
+      "min": 0,
+      "idle": 1000,
+      "acquire": 10000,
+      "evict": 1000,
+      "handleDisconnects": true
+    },
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
+  },
+  "production": {
+    "username": "postgres",
+    "password": "Solesafe2.0",
+    "database": "solesafe_prod",
+    "host": "solesafe-prod.caod2rgttsw8.us-east-1.rds.amazonaws.com",
+    "dialect": "postgresql",
+    "pool": {
+      "max": 10,
+      "min": 0,
+      "idle": 1000,
+      "acquire": 10000,
+      "evict": 1000,
+      "handleDisconnects": true
+    },
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
+  }
+}
