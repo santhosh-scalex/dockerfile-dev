@@ -1,120 +1,125 @@
 {
-    "ipcMode": null,
-    "executionRoleArn": "arn:aws:iam::615363661445:role/ecsTaskExecutionRole",
-    "containerDefinitions": [{
-        "dnsSearchDomains": null,
-        "environmentFiles": null,
-        "logConfiguration": {
-            "logDriver": "awslogs",
-            "secretOptions": null,
-            "options": {
-                "awslogs-group": "/ecs/solesafe-qa-collection-task",
-                "awslogs-region": "us-west-2",
-                "awslogs-stream-prefix": "ecs"
-            }
-        },
-        "entryPoint": [],
-        "portMappings": [{
-            "hostPort": 3000,
-            "protocol": "tcp",
-            "containerPort": 3000
-        }],
-        "command": [],
-        "linuxParameters": null,
-        "cpu": 0,
-        "environment": [],
-        "resourceRequirements": null,
-        "ulimits": null,
-        "dnsServers": null,
-        "mountPoints": [],
-        "workingDirectory": null,
-        "secrets": null,
-        "dockerSecurityOptions": null,
-        "memory": null,
-        "memoryReservation": null,
-        "volumesFrom": [],
-        "stopTimeout": null,
-        "image": "615363661445.dkr.ecr.us-west-2.amazonaws.com/solesafe-qa-collection",
-        "startTimeout": null,
-        "firelensConfiguration": null,
-        "dependsOn": null,
-        "disableNetworking": null,
-        "interactive": null,
-        "healthCheck": null,
-        "essential": true,
-        "links": [],
-        "hostname": null,
-        "extraHosts": null,
-        "pseudoTerminal": null,
-        "user": null,
-        "readonlyRootFilesystem": null,
-        "dockerLabels": null,
-        "systemControls": null,
-        "privileged": null,
-        "name": "solesafe-qa-collection-container"
-    }],
-    "placementConstraints": [],
-    "memory": "512",
-    "taskRoleArn": null,
-    "compatibilities": [
-        "EC2",
-        "FARGATE"
-    ],
-    "taskDefinitionArn": "arn:aws:ecs:us-west-2:615363661445:task-definition/solesafe-qa-collection-task:2",
-    "family": "solesafe-qa-collection-task",
-    "requiresAttributes": [{
-            "targetId": null,
-            "targetType": null,
-            "value": null,
-            "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
-        },
-        {
-            "targetId": null,
-            "targetType": null,
-            "value": null,
-            "name": "ecs.capability.execution-role-awslogs"
-        },
-        {
-            "targetId": null,
-            "targetType": null,
-            "value": null,
-            "name": "com.amazonaws.ecs.capability.ecr-auth"
-        },
-        {
-            "targetId": null,
-            "targetType": null,
-            "value": null,
-            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
-        },
-        {
-            "targetId": null,
-            "targetType": null,
-            "value": null,
-            "name": "ecs.capability.execution-role-ecr-pull"
-        },
-        {
-            "targetId": null,
-            "targetType": null,
-            "value": null,
-            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
-        },
-        {
-            "targetId": null,
-            "targetType": null,
-            "value": null,
-            "name": "ecs.capability.task-eni"
+  "ipcMode": null,
+  "executionRoleArn": "arn:aws:iam::183621527336:role/ecsTaskExecutionRole",
+  "containerDefinitions": [
+    {
+      "dnsSearchDomains": null,
+      "environmentFiles": null,
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "secretOptions": null,
+        "options": {
+          "awslogs-group": "/ecs/qa-task",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "ecs"
         }
-    ],
-    "pidMode": null,
-    "requiresCompatibilities": [
-        "FARGATE"
-    ],
-    "networkMode": "awsvpc",
-    "runtimePlatform": null,
-    "cpu": "256",
-    "revision": 2,
-    "status": "ACTIVE",
-    "inferenceAccelerators": null,
-    "proxyConfiguration": null,
-    "volumes": []
+      },
+      "entryPoint": [],
+      "portMappings": [
+        {
+          "hostPort": 3000,
+          "protocol": "tcp",
+          "containerPort": 3000
+        }
+      ],
+      "command": [],
+      "linuxParameters": null,
+      "cpu": 0,
+      "environment": [],
+      "resourceRequirements": null,
+      "ulimits": null,
+      "dnsServers": null,
+      "mountPoints": [],
+      "workingDirectory": null,
+      "secrets": null,
+      "dockerSecurityOptions": null,
+      "memory": null,
+      "memoryReservation": null,
+      "volumesFrom": [],
+      "stopTimeout": null,
+      "image": "183621527336.dkr.ecr.us-east-1.amazonaws.com/qa",
+      "startTimeout": null,
+      "firelensConfiguration": null,
+      "dependsOn": null,
+      "disableNetworking": null,
+      "interactive": null,
+      "healthCheck": null,
+      "essential": true,
+      "links": [],
+      "hostname": null,
+      "extraHosts": null,
+      "pseudoTerminal": null,
+      "user": null,
+      "readonlyRootFilesystem": null,
+      "dockerLabels": null,
+      "systemControls": null,
+      "privileged": null,
+      "name": "qa-app"
+    }
+  ],
+  "placementConstraints": [],
+  "memory": "512",
+  "taskRoleArn": null,
+  "compatibilities": [
+    "EC2",
+    "FARGATE"
+  ],
+  "taskDefinitionArn": "arn:aws:ecs:us-east-1:183621527336:task-definition/qa-task:9",
+  "family": "qa-task",
+  "requiresAttributes": [
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "ecs.capability.execution-role-awslogs"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "com.amazonaws.ecs.capability.ecr-auth"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "ecs.capability.execution-role-ecr-pull"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "ecs.capability.task-eni"
+    }
+  ],
+  "pidMode": null,
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "networkMode": "awsvpc",
+  "runtimePlatform": null,
+  "cpu": "256",
+  "revision": 9,
+  "status": "ACTIVE",
+  "inferenceAccelerators": null,
+  "proxyConfiguration": null,
+  "volumes": []
 }
