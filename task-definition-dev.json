@@ -1,6 +1,6 @@
 {
   "ipcMode": null,
-  "executionRoleArn": "arn:aws:iam::615363661445:role/ecsTaskExecutionRole",
+  "executionRoleArn": "arn:aws:iam::183621527336:role/ecsTaskExecutionRole",
   "containerDefinitions": [
     {
       "dnsSearchDomains": null,
@@ -9,7 +9,7 @@
         "logDriver": "awslogs",
         "secretOptions": null,
         "options": {
-          "awslogs-group": "/ecs/solesafe-dev-run-task-definition",
+          "awslogs-group": "/ecs/dev-task",
           "awslogs-region": "us-west-1",
           "awslogs-stream-prefix": "ecs"
         }
@@ -37,7 +37,7 @@
       "memoryReservation": null,
       "volumesFrom": [],
       "stopTimeout": null,
-      "image": "615363661445.dkr.ecr.us-west-1.amazonaws.com/solesafe-dev-collection",
+      "image": "183621527336.dkr.ecr.us-west-1.amazonaws.com/dev",
       "startTimeout": null,
       "firelensConfiguration": null,
       "dependsOn": null,
@@ -54,7 +54,7 @@
       "dockerLabels": null,
       "systemControls": null,
       "privileged": null,
-      "name": "solesafe-dev-collection-container"
+      "name": "dev-app"
     }
   ],
   "placementConstraints": [],
@@ -64,8 +64,8 @@
     "EC2",
     "FARGATE"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:us-west-1:615363661445:task-definition/solesafe-dev-run-task-definition:1",
-  "family": "solesafe-dev-run-task-definition",
+  "taskDefinitionArn": "arn:aws:ecs:us-west-1:183621527336:task-definition/dev-task:5",
+  "family": "dev-task",
   "requiresAttributes": [
     {
       "targetId": null,
@@ -117,7 +117,7 @@
   "networkMode": "awsvpc",
   "runtimePlatform": null,
   "cpu": "256",
-  "revision": 1,
+  "revision": 5,
   "status": "ACTIVE",
   "inferenceAccelerators": null,
   "proxyConfiguration": null,
