@@ -81,7 +81,7 @@ jobs:
       id: task-def
       uses: aws-actions/amazon-ecs-render-task-definition@v1
       with:
-        task-definition: task-definition-QA.json
+        task-definition: task-definition-qa.json
         container-name: qa-app
         image: ${{ steps.build-image.outputs.image }}
 
